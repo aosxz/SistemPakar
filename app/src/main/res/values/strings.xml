@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pakar Komputer</string>
+    <string name="app_name">SistemPakar</string>
     <string name="splash_screen_text">Aplikasi Sistem Pakar\nDiagnosa Kerusakan Konputer</string>
     <string name="header_title1">Aplikasi Sistem Pakar</string>
     <string name="header_title2">Diagnosa Kerusakan Pada Komputer</string>
@@ -42,4 +42,5 @@
     <string name="text_bantuan_tentang1">Menu tentang menampilkan deskripsi dan info pembuat Aplikasi Sistem Pakar ini. Pilih menu yang ada dipojok kanan atas untuk menampilakan menu tentang.</string>
     <string name="text_bantuan_tentang2">Lalu akan muncul drop down manu, pilih \"Tentang Aplikasi\".</string>
     <string name="text_bantuan_tentang3">Maka akan tampil informasi tentang Aplikasi Sistem Pakar Diagnosa Kerusakan Komputer ini.</string>
+    <string name="kerusakan_komputer">Kerusakan Komputer</string>
 </resources>

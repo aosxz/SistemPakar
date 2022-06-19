@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0183D1"
-    tools:context=".PertanyaanGejalaActivity">
+    tools:context=".activities.PertanyaanGejalaActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview_pertanyaan"

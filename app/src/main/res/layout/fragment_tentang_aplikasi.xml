@@ -25,7 +25,8 @@
             android:layout_height="300dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:src="@drawable/menu_tentang"/>
+            android:src="@drawable/menu_tentang"
+            android:contentDescription="TODO" />
 
         <TextView
             android:layout_width="wrap_content"

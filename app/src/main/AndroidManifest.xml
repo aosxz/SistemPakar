@@ -14,30 +14,38 @@
         android:theme="@style/Theme.SistemPakar"
         tools:targetApi="31">
         <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.InformasiKerusakanActivity"
             android:label="@string/title_info_kerusakan" />
         <activity
             android:name=".activities.BantuanAplikasiActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.DetailKerusakanActivity"
-            android:label="@string/title_appbar_detailkerusakan"/>
-        <activity android:name=".activities.TentangAppActivity"
-            android:label="@string/title_appbar_tentang"/>
-        <activity android:name=".activities.PertanyaanGejalaActivity"
-            android:label="@string/title_appbar_diagosa"/>
-
+        <activity
+            android:name=".activities.DetailKerusakanActivity"
+            android:label="@string/title_appbar_detailkerusakan" />
+        <activity
+            android:name=".activities.TentangAppActivity"
+            android:label="@string/title_appbar_tentang" />
+        <activity
+            android:name=".activities.PertanyaanGejalaActivity"
+            android:label="@string/title_appbar_diagosa" />
         <activity
             android:name=".activities.SplashScreenActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".activities.MainActivity"
+        <activity
+            android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,7 +53,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

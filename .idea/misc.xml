@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/1330/Documents/GitHub/SistemPakarKerusakanKomputer/app/src/main/res/layout/activity_bantuan_aplikasi.xml" value="0.1598731884057971" />
+        <entry key="..\:/Users/1330/Documents/GitHub/SistemPakarKerusakanKomputer/app/src/main/res/layout/activity_login.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/1330/Documents/GitHub/SistemPakarKerusakanKomputer/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/1330/Documents/GitHub/SistemPakarKerusakanKomputer/app/src/main/res/layout/activity_register.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/1330/Documents/GitHub/SistemPakarKerusakanKomputer/app/src/main/res/layout/activity_splash_screen.xml" value="0.1598731884057971" />
+        <entry key="..\:/Users/1330/Documents/GitHub/SistemPakarKerusakanKomputer/app/src/main/res/layout/activity_tentang_app.xml" value="0.1598731884057971" />
+        <entry key="..\:/Users/1330/Documents/GitHub/SistemPakarKerusakanKomputer/app/src/main/res/layout/fragment_bantuan_info_kerusakan.xml" value="0.1598731884057971" />
+        <entry key="..\:/Users/1330/Documents/GitHub/SistemPakarKerusakanKomputer/app/src/main/res/layout/fragment_tentang_aplikasi.xml" value="0.1598731884057971" />
+        <entry key="..\:/Users/1330/Documents/GitHub/SistemPakarKerusakanKomputer/app/src/main/res/layout/layout_list_kerusakan.xml" value="0.1598731884057971" />
+        <entry key="..\:/Users/1330/Documents/GitHub/SistemPakarKerusakanKomputer/app/src/main/res/menu/tentang_aplikasi.xml" value="0.2" />
         <entry key="..\:/Users/1348/AndroidStudioProjects/SistemPakar/app/src/main/res/layout/activity_bantuan_aplikasi.xml" value="0.1" />
         <entry key="..\:/Users/1348/AndroidStudioProjects/SistemPakar/app/src/main/res/layout/activity_detail_kerusakan.xml" value="0.1" />
         <entry key="..\:/Users/1348/AndroidStudioProjects/SistemPakar/app/src/main/res/layout/activity_informasi_kerusakan.xml" value="0.1" />

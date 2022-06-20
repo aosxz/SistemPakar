@@ -28,9 +28,9 @@
     <string name="dialog_title_hasildiagnosa1">Hasil Diagnosa\nKerusakan</string>
 
     <string name="text_tentang_aplikasi">Aplikasi Sistem Pakar Diagnosa\nKerusakan Pada Komputer</string>
-    <string name="nama_mahasiswa">Nama Pembuat : Syahrul Ramadhan\n\nNIM : 12161040\n\nDosen Pembimbing : Linda Marlinda, MM.,M.Kom \n\nAsisten Dosen Pembimbing : Ratih Yulia Hayuningtyas, M.Kom</string>
-    <string name="tujuan_aplikasi_dibuat">Aplikasi ini dibuat sebagai tugas skripsi untuk mencapai kelulusan Program Strata Satu (S1) Program Studi Teknik Informatika pada STMIK Nusa Mandiri.</string>
-    <string name="info_kampus">Program Studi Teknik Informatika\nSTMIK Nusa Mandiri\nJakarta</string>
+    <string name="nama_mahasiswa">Nama Pembuat : Ahmad Muchtar\n\nNIM : 1711500502\n</string>
+    <string name="tujuan_aplikasi_dibuat">Aplikasi ini dibuat sebagai tugas skripsi untuk mencapai kelulusan Program Strata Satu (S1) Program Studi Teknik Informatika pada Universitas Budi Luhur.</string>
+    <string name="info_kampus">Program Studi Teknik Informatika\nUniversitas Budi Luhur\nJakarta</string>
     <string name="text_bantuan_info1">Menu info kerusakan menampilan daftar data kerusakan komputer yang ada pada Aplikasi Sistem Pakar ini</string>
     <string name="text_bantuan_info2">Pengguna bisa memilih salah satu jenis kerusakan dan bisa meilihat detail kerusakan yang dipilih</string>
     <string name="text_bantuan_info3">Setelah itu akan langsung tampil detail kerusakan komputer yang telah dipilih</string>
@@ -43,4 +43,11 @@
     <string name="text_bantuan_tentang2">Lalu akan muncul drop down manu, pilih \"Tentang Aplikasi\".</string>
     <string name="text_bantuan_tentang3">Maka akan tampil informasi tentang Aplikasi Sistem Pakar Diagnosa Kerusakan Komputer ini.</string>
     <string name="kerusakan_komputer">Kerusakan Komputer</string>
+    <string name="create_account"><font color="#00ff00">text</font></string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="register">Register</string>
+    <string name="back_to_login">Back to Login</string>
 </resources>

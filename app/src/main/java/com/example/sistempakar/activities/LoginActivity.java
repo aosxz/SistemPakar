@@ -1,11 +1,15 @@
 package com.example.sistempakar.activities;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -32,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
     //Declaration SqliteHelper
     SqliteHelper sqliteHelper;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,9 +44,13 @@ public class LoginActivity extends AppCompatActivity {
         sqliteHelper = new SqliteHelper(this);
         initCreateAccountTextView();
         initViews();
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+
+
 
         //set click event of login button
         buttonLogin.setOnClickListener(v -> {
+            imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
 
             //Check user input is correct or not
             if (validate()) {

@@ -22,7 +22,7 @@ public class DbHelper extends SQLiteOpenHelper {
     private static DbHelper instance;
     private SQLiteDatabase db;
 
-    private DbHelper(@Nullable Context context) {
+    public DbHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
@@ -347,6 +347,51 @@ public class DbHelper extends SQLiteOpenHelper {
         insertAturan(new Aturan(12, 39, 2));
         insertAturan(new Aturan(12, 40, 3));
 
+    }
+
+    public void addUser(User user) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+
+        values.put(UserTable.COLUMN_USERNAME, user.getUsername());
+        values.put(UserTable.COLUMN_EMAIL, user.getEmail());
+        values.put(UserTable.COLUMN_PASSWORD, user.getPassword());
+
+        db.insert(UserTable.TABLE_NAME, null, values);
+    }
+
+    public User Authenticate(User user) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(UserTable.TABLE_NAME,// Selecting Table
+                new String[]{UserTable.COLUMN_ID, UserTable.COLUMN_USERNAME, UserTable.COLUMN_EMAIL, UserTable.COLUMN_PASSWORD},// Selecting columns want to query
+                UserTable.COLUMN_EMAIL + "=?",
+                new String[]{user.getEmail()},//Where clause
+                null, null, null);
+
+        if (cursor != null && cursor.moveToFirst() && cursor.getCount() > 0) {
+            User userLogin = new User(cursor.getString(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
+            if (user.getPassword().equalsIgnoreCase(userLogin.getPassword())) {
+                return userLogin;
+            }
+        }
+        return null;
+    }
+
+    public boolean isEmailExists(String email) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(UserTable.TABLE_NAME,// Selecting Table
+                new String[]{UserTable.COLUMN_ID, UserTable.COLUMN_USERNAME, UserTable.COLUMN_EMAIL, UserTable.COLUMN_PASSWORD},// Selecting columns want to query
+                UserTable.COLUMN_EMAIL + "=?",
+                new String[]{email},//Where clause
+                null, null, null);
+
+        if (cursor != null && cursor.moveToFirst() && cursor.getCount() > 0) {
+            return true;
+        }
+
+        return false;
     }
 
     @SuppressLint("Range")

@@ -10,7 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.sistempakar.R;
-import com.example.sistempakar.helper.SqliteHelper;
+//import com.example.sistempakar.helper.SqliteHelper;
+import com.example.sistempakar.helper.DbHelper;
 import com.example.sistempakar.models.User;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
@@ -31,13 +32,13 @@ public class RegisterActivity extends AppCompatActivity {
     Button buttonRegister;
 
     //Declaration SqliteHelper
-    SqliteHelper sqliteHelper;
+    DbHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        sqliteHelper = new SqliteHelper(this);
+        dbHelper = new DbHelper(this);
         initTextViewLogin();
         initViews();
         buttonRegister.setOnClickListener(v -> {
@@ -47,9 +48,9 @@ public class RegisterActivity extends AppCompatActivity {
                 String password = editTextPassword.getText().toString();
 
                 //Check in the database is there any user associated with  this email
-                if (!sqliteHelper.isEmailExists(email)) {
+                if (!dbHelper.isEmailExists(email)) {
                     //Email does not exist now add new user to database
-                    sqliteHelper.addUser(new User(null, username, email, password));
+                    dbHelper.addUser(new User(null, username, email, password));
                     Snackbar.make(buttonRegister, "User created successfully, Now you can login", Snackbar.LENGTH_LONG).show();
                     new Handler().postDelayed(() -> {
                         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);

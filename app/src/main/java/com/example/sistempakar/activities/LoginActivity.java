@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.sistempakar.R;
-import com.example.sistempakar.helper.SqliteHelper;
+import com.example.sistempakar.helper.DbHelper;
 import com.example.sistempakar.models.User;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
@@ -34,14 +34,14 @@ public class LoginActivity extends AppCompatActivity {
     Button buttonLogin;
 
     //Declaration SqliteHelper
-    SqliteHelper sqliteHelper;
+    DbHelper dbHelper;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        sqliteHelper = new SqliteHelper(this);
+        dbHelper = new DbHelper(this);
         initCreateAccountTextView();
         initViews();
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                 String password = editTextPassword.getText().toString();
 
                 //Authenticate user
-                User currentUser = sqliteHelper.Authenticate(
+                User currentUser = dbHelper.Authenticate(
                         new User(null, null, email, password)
                 );
 
